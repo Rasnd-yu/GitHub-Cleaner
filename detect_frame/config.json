@@ -1,0 +1,195 @@
+{
+  "detection_configs": {
+    "fake_stars": {
+      "github_tokens": [
+        "xxx",
+        "xxx",
+        "xxx",
+        "xxx"
+      ],
+      "detection_params": {
+        "max_actions": 2,
+        "max_repos": 1,
+        "max_orgs": 1,
+        "max_stargazers_to_check": 1000,
+        "min_stars_for_detection": 500,
+        "prefilter_max_followers": 50,
+        "prefilter_max_public_repos": 10,
+        "min_low_activity_percentage": 0.1,
+        "activity_days_around_star": 30,
+        "enable_api_detection": true
+      },
+      "api_settings": {
+        "request_timeout": 30,
+        "max_retries": 3,
+        "pool_connections": 50,
+        "pool_maxsize": 100,
+        "rate_limit_delay": 1.5,
+        "user_agent": "GitHub-Abuse-Detector-AutoUpdates/1.0"
+      }
+    },
+
+    "automatic_updates": {
+      "github_token":"xxx",
+      "detection_params": {
+        "time_window_hours": 24,
+        "min_commits": 10,
+        "max_avg_changes": 5,
+        "commit_delay_seconds": 0.5,
+        "max_commits_to_check": 20
+      },
+      "api_settings": {
+        "request_timeout": 25,
+        "max_retries": 4,
+        "rate_limit_delay": 2.0,
+        "user_agent": "GitHub-Abuse-Detector-AutoUpdates/1.0"
+      }
+    },
+
+    "typo_squatting": {
+      "github_token": "xxx",
+      "detection_params": {
+        "min_stars_high": 1000,
+        "similarity_threshold": 0.7,
+        "similarity_method": "rapidfuzz",
+        "name_similarity_threshold": 0.7,
+        "similar_repo_check_count": 5,
+        "exclude_topics": ["template", "boilerplate"],
+        "min_star_ratio": 2.0,
+        "min_fork_ratio": 2.0,
+        "skip_awesome_repos": true,
+        "famous_orgs": [
+          "microsoft", "google", "facebook", "amazon", "apple", "netflix",
+          "uber", "airbnb", "twitter", "linkedin", "github", "docker",
+          "kubernetes", "tensorflow", "pytorch", "reactjs", "angular",
+          "vuejs", "nodejs", "python", "golang", "rust-lang", "dockersamples"
+        ]
+      },
+      "api_settings": {
+        "request_timeout": 20,
+        "max_retries": 3,
+        "rate_limit_delay": 2,
+        "user_agent": "GitHub-Abuse-Detector-TypoSquatting/2.0"
+      }
+    },
+
+    "reputation_farming": {
+      "github_tokens": [
+        "xxx",
+        "xxx",
+        "xxx",
+        "xxx"
+      ],
+      "detection_params": {
+        "min_pr_age_days": 400,
+        "max_prs_per_repo": 300,
+        "post_resolution_delay_days": 400,
+        "min_comment_length": 10,
+        "max_workers": 5,
+        "api_delay": 0.5,
+        "search_api_delay": 1.0,
+        "primary_token_threshold": 70,
+        "backup_token_threshold": 70,
+        "suspicious_keywords": [
+          "+1", "LGTM", "looks good", "approved", "nice", "good job", "thanks",
+          "great", "awesome", "excellent", "good work", "well done"
+        ],
+        "generic_patterns": [
+          "^[\\s\\W]*$",
+          "^(good|nice|great|awesome|excellent)[\\s\\.,!]*$",
+          "^\\+1[\\s\\W]*$",
+          "^LGTM[\\s\\W]*$",
+          "^thanks?[\\s\\.,!]*$",
+          "^approved[\\s\\.,!]*$"
+        ]
+      },
+      "api_settings": {
+        "request_timeout": 30,
+        "max_retries": 3,
+        "rate_limit_delay": 1.0,
+        "user_agent": "GitHub-Abuse-Detector-RepFarming/5.0"
+      }
+    },
+
+    "fake_stats": {
+          "github_token": "xxx",
+          "detection_params": {
+            "star_discrepancy_threshold": 5,
+            "min_fake_stars": 100,
+            "max_profile_repos_to_check": 5,
+            "max_user_repos_to_check": 50
+          },
+          "api_settings": {
+            "max_retries": 3,
+            "request_timeout": 30,
+            "rate_limit_delay": 1.0,
+            "user_agent": "FakeStatsDetector/1.0"
+          }
+        },
+
+      "spoofed_contributor": {
+        "github_token": "xxx",
+        "corpus_path": "corpus_developers_famous.json",
+        "detection_params": {
+          "min_contributor_commits": 2,
+          "max_repo_forks": 1000,
+          "max_repo_stars": 1000,
+          "min_repo_age_days": 3000,
+          "max_contributors_per_repo": 30
+        },
+        "api_settings": {
+          "request_timeout": 35,
+          "max_retries": 4,
+          "rate_limit_delay": 2.0,
+          "user_agent": "GitHub-Abuse-Detector-SpoofedContrib/1.0",
+          "enable_cache": true
+        }
+      },
+
+    "issue_spam": {
+      "github_token": "xxx",
+      "detection_params": {
+        "model_path": "mlartifacts/2/0579ea92a6c7494e9bfdf42813fe3867/artifacts/nn/model.pkl",
+        "max_issues_to_check": 500,
+        "per_page": 100,
+        "fetch_delay_seconds": 0.8,
+        "zero_tolerance": true,
+        "time_window_days": null,
+        "predict_workers": 10,
+        "fetch_workers": 3
+      },
+      "api_settings": {
+        "max_retries": 3,
+        "request_timeout": 30,
+        "rate_limit_delay": 1,
+        "user_agent": "GitHub-Abuse-Detector/2.0"
+      }
+    },
+
+    "keyword_stuffing": {
+      "github_token": "xxx",
+      "detection_params": {
+        "corpus_path": "corpus_keyword_stuffing.json",
+        "score_threshold": 2.0,
+        "min_low_score_count": 5,
+        "min_readme_length": 100,
+        "min_corpus_size": 10
+      },
+      "api_settings": {
+        "request_timeout": 25,
+        "max_retries": 3,
+        "rate_limit_delay": 1.0,
+        "user_agent": "GitHub-Abuse-Detector-KeywordStuffing/1.0"
+      }
+    }
+  },
+
+  "global_settings": {
+    "log_level": "INFO",
+    "output_format": "csv",
+    "default_request_timeout": 30,
+    "default_max_retries": 3,
+    "default_rate_limit_delay": 1.0,
+    "default_user_agent": "GitHub-Abuse-Detector/1.0"
+  }
+}
