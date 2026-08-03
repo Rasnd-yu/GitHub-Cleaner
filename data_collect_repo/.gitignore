@@ -1,0 +1,19 @@
+# The collector inputs are versioned in compressed form under datasets/ (67 MB in
+# total). Their expanded copies are not: they amount to 596 MB across roughly 51,000
+# files, and 2025.07.25_010355_all.txt alone exceeds GitHub's 100 MB per-file limit
+# for regular Git objects. Recreate them with the commands in datasets/README.md.
+archive/
+collections/
+topics/
+OpenSSF-scorecard/
+2025.07.25_010355_all.txt
+
+# Collector state and output, written at run time
+github_repos.json
+collector_state.json
+processed_repos.json
+collection_report/
+
+# Local tooling
+.idea/
+__pycache__/
