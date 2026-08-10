@@ -85,8 +85,8 @@ All reported experiments were run on Python 3.12 (Windows 11, Intel i7-12700H, 1
 
    ```bash
    git lfs install
-   git clone https://github.com/Rasnd-yu/GitHub_Cleaner.git
-   cd GitHub_Cleaner
+   git clone https://github.com/Rasnd-yu/GitHub-Cleaner.git
+   cd GitHub-Cleaner
    ```
 
    If the repository was cloned before Git LFS was installed, materialize the model artifact with
@@ -299,14 +299,14 @@ The `issue_spam` detector relies on a pretrained classifier that ships with the 
 GitHub imposes on regular Git objects. Until `git lfs pull` has been executed, the path below
 holds a text pointer rather than the model, and the detector reports `Model loading failed`.
 
-The same artifact is attached to the [`model-v1.0`](https://github.com/Rasnd-yu/GitHub_Cleaner/releases/tag/model-v1.0)
+The same artifact is attached to the [`model-v1.0`](https://github.com/Rasnd-yu/GitHub-Cleaner/releases/tag/model-v1.0)
 release, byte-for-byte identical to the tracked copy. Downloading it from there avoids Git LFS
 altogether, which matters for two reasons: the source archives generated for a release contain
 only the LFS pointer, and release assets are exempt from the Git LFS bandwidth allowance.
 
 ```bash
 curl -L -o detect_frame/mlartifacts/2/0579ea92a6c7494e9bfdf42813fe3867/artifacts/nn/model.pkl \
-  https://github.com/Rasnd-yu/GitHub_Cleaner/releases/download/model-v1.0/issue_spam_model_v1.0.pkl
+  https://github.com/Rasnd-yu/GitHub-Cleaner/releases/download/model-v1.0/issue_spam_model_v1.0.pkl
 ```
 
 | Property    | Value                                                                                  |
@@ -396,15 +396,15 @@ where GitHub records them in the account's public timeline as sustained engageme
   <img src="experimental_results/RQ3/repo_cooccurrence_heatmap.png" width="420"
        alt="Pairwise co-occurrence rates among multi-abuse repositories">
   <img src="experimental_results/RQ3/user_cooccurrence_heatmap.png" width="420"
-       alt="Pairwise co-occurrence rates among multi-abuse developers">
+       alt="Pairwise co-occurrence rates among multi-abuse accounts">
 </p>
 
-Co-occurrence is examined at both the repository and the developer level. Globally it is rare —
-7.73% of the abusive repositories and 1.17% of the involved accounts engage in more than one
+Co-occurrence is examined at both the repository and the account level. Globally it is rare —
+7.73% of the abuse repositories and 1.17% of the involved accounts engage in more than one
 behavior, and pairwise associations are negligible (|φ| ≤ 0.08) — which indicates that abuse largely
-operates in isolation rather than as coordinated campaigns. Where it does occur, however, it is
-sharply concentrated: three quarters of the multi-abuse repositories are Trending, and core
-developers rather than disposable executing accounts dominate the multi-abuse population. Within
+operates in isolation rather than as coordinated multi-type campaigns. Where it does occur, however,
+it is sharply concentrated: three quarters of the multi-abuse repositories are trending repositories,
+and core developers rather than disposable executing accounts dominate the multi-abuse population. Within
 that subset Keyword Stuffing paired with Reputation Farming is by far the most frequent combination
 at both levels, followed by Issue Spam with Reputation Farming, a pattern consistent with popular
 projects attracting both self-promotion and low-cost collaboration abuse.
@@ -423,7 +423,7 @@ long-lived, asset-rich and active, whereas involvers behave as disposable instru
 lifespans, few assets and weak social ties. Spoofed Contributor inverts the picture, because there
 the involvers are the impersonated reputable developers, i.e., the victims. For the behaviors
 without a traceable involver, Keyword Stuffing owners are statistically indistinguishable from the
-abuse-free baseline, and Typo Squatting owners differ only in asset value.
+non-abuse baseline, and Typo Squatting owners differ only in asset value.
 
 <p align="center">
   <img src="experimental_results/RQ4/cluster_boxplots.png" width="560"
