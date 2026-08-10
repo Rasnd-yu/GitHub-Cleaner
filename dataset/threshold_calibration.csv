@@ -58,8 +58,14 @@ fake_stars,DataGerry/DataGerry,https://github.com/DataGerry/DataGerry,False
 fake_stars,kismetpro/NodeSuber,https://github.com/kismetpro/NodeSuber,False
 fake_stars,packit/packit,https://github.com/packit/packit,False
 fake_stars,OpenCTI-Platform/connectors,https://github.com/OpenCTI-Platform/connectors,False
+fake_stars,mdn/translated-content,https://github.com/mdn/translated-content,False
+fake_stars,douweyntema/smtp2go_php-fusion_api,https://github.com/douweyntema/smtp2go_php-fusion_api,False
+fake_stars,FibonacciDude/CEle,https://github.com/FibonacciDude/CEle,False
 issue_spam,AgibotTech/genie_sim,https://github.com/AgibotTech/genie_sim,True
 issue_spam,neomjs/neo,https://github.com/neomjs/neo,True
+issue_spam,LAION-AI/audio-dataset,https://github.com/LAION-AI/audio-dataset,True
+issue_spam,rprokap/pset-9,https://github.com/rprokap/pset-9,True
+issue_spam,lizongying/my-tv-0,https://github.com/lizongying/my-tv-0,True
 issue_spam,Love4vn/love4vn,https://github.com/Love4vn/love4vn,True
 issue_spam,HMCL-dev/HMCL-PE-CN,https://github.com/HMCL-dev/HMCL-PE-CN,True
 issue_spam,SeattleAttic/HedyNet,https://github.com/SeattleAttic/HedyNet,True
@@ -103,9 +109,6 @@ issue_spam,6dylan6/jdpro,https://github.com/6dylan6/jdpro,False
 issue_spam,babalae/bettergi-scripts-list,https://github.com/babalae/bettergi-scripts-list,False
 issue_spam,exelearning/exelearning,https://github.com/exelearning/exelearning,False
 issue_spam,DefiLlama/DefiLlama-Adapters,https://github.com/DefiLlama/DefiLlama-Adapters,False
-issue_spam,mainIine/foe-helfer-extension,https://github.com/mainIine/foe-helfer-extension,False
-issue_spam,microlinkhq/www,https://github.com/microlinkhq/www,False
-issue_spam,digitalmethodsinitiative/zeeschuimer,https://github.com/digitalmethodsinitiative/zeeschuimer,False
 issue_spam,heshengtao/super-agent-party,https://github.com/heshengtao/super-agent-party,False
 issue_spam,UI5/openui5,https://github.com/UI5/openui5,False
 fake_stats,RedactedDevelopment,https://github.com/RedactedDevelopment,True
@@ -116,8 +119,6 @@ fake_stats,aldawsarir,https://github.com/aldawsarir,True
 fake_stats,coldwoong-moon,https://github.com/coldwoong-moon,True
 fake_stats,ndamukunda139,https://github.com/ndamukunda139,True
 fake_stats,saweedkh,https://github.com/saweedkh,True
-fake_stats,jeffayovi,https://github.com/jeffayovi,True
-fake_stats,lezl,https://github.com/lezl,True
 fake_stats,0xshimon,https://github.com/0xshimon,True
 fake_stats,Alexander-T-Moss,https://github.com/Alexander-T-Moss,False
 fake_stats,Jdrty,https://github.com/Jdrty,False
@@ -271,7 +272,6 @@ spoofed_contributor,liweiyi/ChestnutCMS,https://github.com/liweiyi/ChestnutCMS,F
 spoofed_contributor,digital-preservation/droid,https://github.com/digital-preservation/droid,False
 spoofed_contributor,openrewrite/rewrite-spring,https://github.com/openrewrite/rewrite-spring,False
 spoofed_contributor,blueseerERP/blueseer,https://github.com/blueseerERP/blueseer,False
-spoofed_contributor,hyperledger/besu,https://github.com/hyperledger/besu,False
 spoofed_contributor,Convex-Dev/convex,https://github.com/Convex-Dev/convex,False
 spoofed_contributor,spring-projects/spring-ws,https://github.com/spring-projects/spring-ws,False
 spoofed_contributor,MehVahdJukaar/Supplementaries,https://github.com/MehVahdJukaar/Supplementaries,False
